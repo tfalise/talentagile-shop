@@ -11,5 +11,7 @@ pool:
   vmImage: ubuntu-latest
 
 steps:
-- bash: terraform plan -out deployment.tfplan
+- bash: | 
+    cd iac
+    terraform plan -out deployment.tfplan
   displayName: 'Terraform plan'
